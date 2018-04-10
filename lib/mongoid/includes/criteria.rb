@@ -36,6 +36,7 @@ module Mongoid
       #
       # Returns the cloned Mongoid::Criteria.
       def includes(*relations, **options)
+        # puts "HERE"
         if options[:from]
           from_metadata = add_inclusion(klass, options[:from])
           if from_metadata.polymorphic_belongs_to? && !options[:from_class]

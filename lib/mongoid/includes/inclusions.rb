@@ -21,8 +21,10 @@ module Mongoid
         # a previously specified loader.
         delete(metadata) if metadata.loader || metadata.modifier
 
+        # puts "BEFORE: #{self.inspect}"
         # Internally it's a set so it won't add it twice.
         add(metadata)
+        # puts "AFTER: #{self.inspect}"
 
         metadata
       end

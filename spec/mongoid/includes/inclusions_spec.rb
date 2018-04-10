@@ -22,9 +22,14 @@ describe Mongoid::Includes::Inclusions do
 
     context 'prevents duplicates' do
       Given {
+        # puts "size: #{inclusions.size}"
+        # puts 'before add'
         inclusions.add(Band.relations['albums'])
+        # puts 'after add'
       }
-      Then { inclusions.size == 3 }
+      Then {
+        inclusions.size == 3
+      }
     end
   end
 end

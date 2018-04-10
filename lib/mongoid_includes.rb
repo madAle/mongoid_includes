@@ -1,5 +1,4 @@
 require 'mongoid'
-
 require 'mongoid/includes'
 
 # add english load path by default
@@ -9,4 +8,4 @@ Mongoid::Contextual::Mongo.send :prepend, Mongoid::Includes::EagerLoad
 Mongoid::Contextual::Memory.send :prepend, Mongoid::Includes::EagerLoad
 
 Mongoid::Criteria.send :prepend, Mongoid::Includes::Criteria
-Mongoid::Relations::Eager::Base.send :prepend, Mongoid::Includes::Relations::Eager
+Mongoid::Association::EagerLoadable.send :prepend, Mongoid::Includes::Relations::Eager

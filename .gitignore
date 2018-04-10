@@ -4,3 +4,4 @@ spec/mongo.log
 
 coverage.data/
 coverage/
+.idea/
